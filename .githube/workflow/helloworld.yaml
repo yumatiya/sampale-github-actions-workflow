@@ -1,0 +1,16 @@
+name: "hello world workflow"
+
+# control when the action will run. triggers the workflow on push sone to master or production branch
+on: 
+  push:
+    branches:
+      - master
+      - production
+
+jobs:
+  hello_word:
+   runs-on: ubuntu-latest
+   steps:
+    - name: "print hello world"
+      run: echo "hello world"
+      
